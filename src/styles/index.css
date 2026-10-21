@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Tajawal', 'IBM Plex Sans Arabic', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom Smooth Scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #1e3a3a;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #059669;
+  }
+}
+
+@layer utilities {
+  .wesal-card {
+    @apply bg-white dark:bg-wesal-dark-card border border-wesal-border dark:border-wesal-dark-border shadow-soft-card dark:shadow-dark-card transition-all;
+  }
+  .wesal-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(231, 224, 211, 0.8);
+  }
+  .dark .wesal-glass {
+    background: rgba(20, 39, 42, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 242, 231, 0.1);
+  }
+  .text-glow-gold {
+    text-shadow: 0 0 15px rgba(250, 204, 21, 0.35);
+  }
+  .font-quran {
+    font-family: 'Amiri', 'Scheherazade New', serif;
+  }
+  .font-heading {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+  }
+}
